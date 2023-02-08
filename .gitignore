@@ -2,3 +2,4 @@
 __pycache__
 .DS_Store
 test.txt
+/src/app/__pycache__
