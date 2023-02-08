@@ -1,0 +1,45 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Информация</title>
+    <link rel="stylesheet" href="{% static 'css/stats.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div class="pic">
+            <img src="{% static image %}" alt="cat mood">
+        </div>
+        <div class="info">
+            <p>Кот - {{ name }}</p>
+            <p>Возраст - {{ age }}</p>
+            <p>Уровень счастья - {{ happiness }}</p>
+            <p>Уровень сытости - {{ fullness }}</p>
+            <br>
+
+            <p>
+                Info:
+                <ul>
+                    <li>Cat is happy when his happiness is higher or equal to 50</li>
+                    <li>Cat is angry when his happiness is lower than 50</li>
+                    <li>Cat is sleeping when selected action is 'уложить спать кота'</li>
+                </ul>
+            </p>
+        </div>
+    </div>
+
+    <form action="" method="GET">
+        {% csrf_token %}
+        <select name="action" id="action" required>
+            <option value="" selected disabled>Выберите действие</option>
+            <option value="play">поиграть с котом</option>
+            <option value="feed">покормить кота</option>
+            <option value="sleep">уложить спать кота</option>
+        </select>
+
+        <button type="submit">Подтвердить</button>
+    </form>
+</body>
+</html>

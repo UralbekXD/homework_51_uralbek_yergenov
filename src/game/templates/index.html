@@ -1,0 +1,27 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Кот</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <div class="container">
+        <form action="cat_stats/" method="POST">
+            {% csrf_token %}
+
+            <h1 class="title">
+                Вас приветсвтует симулятор кота для начало введите имя кота
+            </h1>
+
+            <div class="name">
+                <input type="text" name="name" placeholder="введите имя кота" required>
+            </div>
+
+            <button class="button" type="submit">Создать</button>
+        </form>
+    </div>
+</body>
+</html>

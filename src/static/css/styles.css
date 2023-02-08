@@ -1,0 +1,34 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form {
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.name {
+    margin: 50px 0;
+}
+
+.name input {
+    padding: 10px;
+    width: 500px;
+    height: 25px;
+    font-size: 18px;
+    border: 4px solid black;
+}
+
+.button {
+    padding: 10px 25px;
+    border: 2px solid black;
+    background: #fff;
+}
